@@ -22,8 +22,20 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+enable_testing()
 
+add_executable(
+  DynamicArrayTest
+  DynamicArrayTest.cpp
+)
 
+target_link_libraries(
+  DynamicArrayTest
+  GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(DynamicArrayTest)
 
 
 
