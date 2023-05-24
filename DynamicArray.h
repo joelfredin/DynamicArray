@@ -13,5 +13,7 @@ public:
     int getSize();
     int getCapacity();
     void resize(int new_capacity);
-    void push_back(int value);
+    void pushBack(int value);
+    int popBack();
+    void printArray();
 };

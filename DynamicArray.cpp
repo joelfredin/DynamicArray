@@ -1,4 +1,5 @@
 #include <algorithm>
+#include<iostream>
 #include"DynamicArray.h"
 
 DynamicArray::DynamicArray() : data(nullptr), size(0), capacity(15)
@@ -33,7 +34,27 @@ void DynamicArray::resize(int new_capacity)
     capacity = new_capacity;
 }
 
-void DynamicArray::push_back(int value)
+void DynamicArray::pushBack(int value)
 {
-    
+    if(size == capacity)
+    {
+        resize(capacity * 2);
+    }
+    data[size] = value;
+    size++;
+}
+
+int DynamicArray::popBack()
+{
+    int value_to_return = data[size];
+    resize(capacity-1);
+    return value_to_return;
+}
+
+void DynamicArray::printArray()
+{
+    for(int i = 0; i < size; i++)
+    {
+        std::cout << data[i] << std::endl;
+    }
 }
