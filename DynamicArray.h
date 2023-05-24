@@ -15,5 +15,5 @@ public:
     void resize(int new_capacity);
     void pushBack(int value);
     int popBack();
-    void printArray();
+    void print();
 };

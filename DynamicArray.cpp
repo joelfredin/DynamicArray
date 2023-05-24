@@ -46,12 +46,12 @@ void DynamicArray::pushBack(int value)
 
 int DynamicArray::popBack()
 {
-    int value_to_return = data[size];
+    int value_to_return = data[size-1];
     resize(capacity-1);
     return value_to_return;
 }
 
-void DynamicArray::printArray()
+void DynamicArray::print()
 {
     for(int i = 0; i < size; i++)
     {

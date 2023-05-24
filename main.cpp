@@ -1,5 +1,7 @@
 #include<iostream>
 #include"DynamicArray.h"
+// #include <googletest/gtest.h>
+#include <gtest/gtest.h>
 
 // Main body of the project
 
